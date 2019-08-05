@@ -728,6 +728,11 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# SurfaceFlinger and Hardware Acceleration Tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+   debug.sf.disable_backpressure=1 \
+   video.accelerate.hw=1
+
 # MiFare Permissions file
 PRODUCT_COPY_FILES += \
       frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
